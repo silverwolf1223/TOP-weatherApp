@@ -7,21 +7,65 @@
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-    <h1 id="locationHeader"></h1>
-    <input type="search" id="search">
+    <div id="header">
+        <h1 id="locationHeader"></h1>
+        <input type="search" id="search">
+        <div>Fahrenheit to Celsius</div>
 
-    <ul>
-        <li id="Temp"></li>
-        <li id="TempMax"></li>
-        <li id="TempMin"></li>
-        <li id="FeelsLike"></li>
-        <li id="Humidity"></li>
-        <li id="RainChance"></li>
-        <li id="WindSpeed"></li>
-        <li id="conditions"></li>
-    </ul>
-    <img id="icon">
+        <label class="switch">
+            <input type="checkbox" id="toggle">
+            <span class="slider round"></span>
+        </label>
 
-<script src="./script.js"></script>
+    </div>
+
+    <div id="daily">
+        <div class="dailyDivs">
+            <h2 id="Temp"></h2>
+            <div id="RH">
+                <div id="RainChance"></div>
+                <div id="Humidity"></div>
+                <img id="giphy">
+            </div>
+        </div>
+        <div class="dailyDivs">
+            <img id="icon">
+            <div id="WT">
+                <div id="WindSpeed"></div>
+                <div id="time">10:36AM Sunday</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="hourly">
+        <table>
+            <caption>Houlry</caption>
+            <thead>
+                <tr>
+                    <th id="hourTemp">Temperature</th>
+                    <th id="hourPrecip">Precipatation</th>
+                    <th id="hourWind">Wind</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr id="hourlyData">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr id="hours">
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="./script.js"></script>
 </body>
 </html>
